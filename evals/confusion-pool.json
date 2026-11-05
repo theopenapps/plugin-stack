@@ -1,0 +1,350 @@
+[
+{
+"expect": "optimize-listing",
+"query": "my chatgpt app cardly group cards (chatgpt:plugin_asdk_app_example) sits at #118 in Communication. subtitle is 'A group card everyone signs'. what should the listing actually say?"
+},
+{
+"expect": "optimize-listing",
+"query": "rewrite the store description for our Claude connector, it's marketing analytics. competitors in the category seem to write way longer ones and we have one sentence"
+},
+{
+"expect": "optimize-listing",
+"query": "ASO for a cursor plugin? we're called lintkit on the marketplace, what name, description and tags would do better"
+},
+{
+"expect": "optimize-listing",
+"query": "we have 8 keywords in our chatgpt plugin manifest and half are junk. which ones are the top Travel apps using, and what should ours be"
+},
+{
+"expect": "optimize-listing",
+"query": "our plugin dropped from #40 to #90 in Productivity on ChatGPT this month and nothing changed on our side. maybe the copy is stale? redo it"
+},
+{
+"expect": "optimize-listing",
+"query": "Should my ChatGPT app subtitle lead with a verb? Currently 'Smart invoices for teams'. Give me three options under the limit, based on what ranks."
+},
+{
+"expect": "optimize-listing",
+"query": "Is our live Claude plugin's store description good enough? plugin.json is in the repo root. I want a paste-ready replacement."
+},
+{
+"expect": "submit-plugin",
+"query": "mcp server works in chatgpt dev mode, i want it in the plugin directory next week. what do i need and what can't i change after?"
+},
+{
+"expect": "submit-plugin",
+"query": "OpenAI rejected our app, something about promotional claims in the description and missing test credentials. help me resubmit"
+},
+{
+"expect": "submit-plugin",
+"query": "getting ready to publish to the claude plugin directory, is the slug permanent? put together everything i need to paste into the form"
+},
+{
+"expect": "submit-plugin",
+"query": "prep a store submission kit for this repo, Cursor marketplace and ChatGPT both"
+},
+{
+"expect": "submit-plugin",
+"query": "the reviewer is going to need a demo account for our oauth app. what should the test instructions look like for chatgpt app review"
+},
+{
+"expect": "submit-plugin",
+"query": "we're about to launch our connector. which countries should I pick when I submit? does the EU work differently"
+},
+{
+"expect": "submit-plugin",
+"query": "before i upload the chatgpt plugin zip, check that this repo is actually ready"
+},
+{
+"expect": "audit-discoverability",
+"query": "claude never picks my mcp tools even when i ask for exactly what they do, it goes to web search. server is https://mcp.example-invoices.com/mcp"
+},
+{
+"expect": "audit-discoverability",
+"query": "would chatgpt choose my flight app or kiwi if someone says 'find me cheap flights to lisbon in may'? can you test that"
+},
+{
+"expect": "audit-discoverability",
+"query": "AEO for my plugin: how do i make sure agents pick us for 'summarize my meetings' prompts over otter and fireflies"
+},
+{
+"expect": "audit-discoverability",
+"query": "review my tool descriptions and annotations in src/tools/*.ts, i want the model to call them at the right moment"
+},
+{
+"expect": "audit-discoverability",
+"query": "here are 8 prompts people should use our connector for. check whether our listing and tools actually cover them compared with rival connectors"
+},
+{
+"expect": "audit-discoverability",
+"query": "my app has installs but nobody's agent actually calls it. how do i figure out what's wrong"
+},
+{
+"expect": "audit-discoverability",
+"query": "is readOnlyHint worth setting? our server has 14 tools with no annotations and two of them look identical to the model"
+},
+{
+"expect": "design-widgets",
+"query": "show me how the top travel apps in chatgpt design their flight result cards, i'm about to build ours"
+},
+{
+"expect": "design-widgets",
+"query": "here's a screenshot of our apps sdk widget (./shots/card.png). is it any good compared to what's live?"
+},
+{
+"expect": "design-widgets",
+"query": "our MCP Apps inline card is a mess on mobile at 390px. redo it based on what works in the store"
+},
+{
+"expect": "design-widgets",
+"query": "what do the widgets from Trip.com and Kiwi look like inside chatgpt? pull them"
+},
+{
+"expect": "design-widgets",
+"query": "redesign the checkout confirmation card in our chatgpt app, components are in web/src/widgets/"
+},
+{
+"expect": "design-widgets",
+"query": "should our chatgpt app render a carousel or a list for search results? what do others in the store do"
+},
+{
+"expect": "design-widgets",
+"query": "dark mode on our widget looks off inside chatgpt, critique it against real apps"
+},
+{
+"expect": "watch-competitors",
+"query": "track notion, coda and slite in the claude store against mine. who's up this week?"
+},
+{
+"expect": "watch-competitors",
+"query": "do the weekly competitor check again for my plugin"
+},
+{
+"expect": "watch-competitors",
+"query": "who is winning the travel category on chatgpt right now and what changed"
+},
+{
+"expect": "watch-competitors",
+"query": "did any of our rivals add MCP tools or rewrite their listings in the last 7 days? chatgpt:kiwi and chatgpt:skyscanner"
+},
+{
+"expect": "watch-competitors",
+"query": "kiwi just got featured? compare us, them and skyscanner over the last week"
+},
+{
+"expect": "watch-competitors",
+"query": "compare installs for superpowers, frontend-design and plugin-dev on claude, who's growing fastest"
+},
+{
+"expect": "watch-competitors",
+"query": "anything new from my competitors since last time i asked? .agents/plugin-stack.md has the list"
+},
+{
+"expect": "plugin-stack",
+"query": "i have an mcp server and a chatgpt app live. what should i do next to grow it"
+},
+{
+"expect": "plugin-stack",
+"query": "set up plugin-stack for this repo"
+},
+{
+"expect": "plugin-stack",
+"query": "just installed these skills, where do i start with my cursor plugin"
+},
+{
+"expect": "plugin-stack",
+"query": "what's the next thing to do for my plugin? last did a listing rewrite two weeks ago"
+},
+{
+"expect": "plugin-stack",
+"query": "we built the plugin. now what? no idea how to get it in front of people"
+},
+{
+"expect": "plugin-stack",
+"query": "run setup and tell me one thing you find about my listing"
+},
+{
+"expect": "none",
+"query": "my iOS app's keyword field needs ASO help, how do i use the 100 characters in app store connect"
+},
+{
+"expect": "none",
+"query": "submit my vscode extension to the marketplace, vsce publish keeps failing on the publisher id"
+},
+{
+"expect": "none",
+"query": "wordpress.org plugin review rejected ours for escaping issues, plugin-check shows 14 errors. how do i fix and resubmit"
+},
+{
+"expect": "none",
+"query": "write the chrome web store listing for my browser extension, including the 132 character summary"
+},
+{
+"expect": "none",
+"query": "optimize my amazon listing titles and bullets for a kitchen knife set"
+},
+{
+"expect": "none",
+"query": "build me an MCP server in TypeScript that wraps the Stripe API, with streamable http"
+},
+{
+"expect": "none",
+"query": "add a react card component to my next.js dashboard that shows the last 5 invoices"
+},
+{
+"expect": "none",
+"query": "my mcp server's oauth flow returns 401 in claude desktop after the token refresh, here's the log"
+},
+{
+"expect": "none",
+"query": "improve my saas landing page so it gets cited in ai overviews, schema markup and AEO stuff"
+},
+{
+"expect": "none",
+"query": "who are Linear's competitors in project management software? monitor their pricing pages weekly"
+},
+{
+"expect": "none",
+"query": "publish my figma plugin to the community, what do they check in review"
+},
+{
+"expect": "none",
+"query": "write a skill for this repo that runs our release checklist"
+},
+{
+"expect": "none",
+"query": "add a paywall to my chatgpt app, what's the checkout pattern with stripe"
+},
+{
+"expect": "none",
+"query": "redesign my mobile app's onboarding screens, the flutter code is in lib/onboarding"
+},
+{
+"expect": "optimize-listing|audit-discoverability",
+"query": "people searching 'invoice' in the chatgpt directory never see my app. how do i fix that"
+},
+{
+"expect": "audit-discoverability",
+"query": "chatgpt doesn't suggest my app when someone asks about invoices in a normal chat, even though it's installed"
+},
+{
+"expect": "optimize-listing|audit-discoverability",
+"query": "what words should my listing use so agents find it?"
+},
+{
+"expect": "optimize-listing",
+"query": "my claude plugin isn't getting installs. plugin is claude:plugin_0164dLrWkiDy6zeojjZmQudR"
+},
+{
+"expect": "plugin-stack|optimize-listing",
+"query": "how do i get more installs for my chatgpt app? no idea where to begin"
+},
+{
+"expect": "optimize-listing|watch-competitors",
+"query": "what keywords are we missing compared to kiwi and skyscanner"
+},
+{
+"expect": "watch-competitors",
+"query": "kiwi rewrote their description last week, what did they change"
+},
+{
+"expect": "optimize-listing",
+"query": "what did the top productivity apps change in their listings this month? i want to steal ideas for our own copy"
+},
+{
+"expect": "submit-plugin",
+"query": "write the listing copy for my chatgpt app, i'm submitting tomorrow and it's never been listed"
+},
+{
+"expect": "submit-plugin",
+"query": "our listing got rejected for claims in the description. rewrite it so it passes"
+},
+{
+"expect": "audit-discoverability|submit-plugin",
+"query": "audit my mcp server before i submit it"
+},
+{
+"expect": "audit-discoverability",
+"query": "audit my plugin"
+},
+{
+"expect": "audit-discoverability|design-widgets",
+"query": "are my widgets hurting my chances of being picked by chatgpt?"
+},
+{
+"expect": "plugin-stack",
+"query": "full review of my chatgpt app please: listing, tools, widgets, the lot. what's weakest"
+},
+{
+"expect": "submit-plugin|plugin-stack",
+"query": "should i also put my chatgpt app on claude and cursor? what would that take"
+},
+{
+"expect": "watch-competitors",
+"query": "which rivals should i even be comparing myself against in the claude connectors directory"
+},
+{
+"expect": "watch-competitors",
+"query": "set up a weekly monitor on my 5 competitors, email me changes"
+},
+{
+"expect": "none",
+"query": "optimize my custom GPT for the GPT store, it has 200 chats"
+},
+{
+"expect": "none",
+"query": "what's the top ranking chatgpt app in germany today?"
+},
+{
+"expect": "none",
+"query": "why is my chatgpt app not available in germany"
+},
+{
+"expect": "none",
+"query": "how big is the claude connector market, how many launched last month"
+},
+{
+"expect": "submit-plugin|chatgpt-app-submission",
+"query": "generate chatgpt-app-submission.json for this repo"
+},
+{
+"expect": "submit-plugin",
+"query": "we want to submit to chatgpt. openai has that submission skill, but what about country choices and the stuff that can't change later"
+},
+{
+"expect": "submit-plugin",
+"query": "how do i get my mcp server listed on the claude connectors directory"
+},
+{
+"expect": "none",
+"query": "add a dark mode toggle to my chatgpt app's settings widget and fix the csp error"
+},
+{
+"expect": "design-widgets",
+"query": "critique my chatgpt widget screenshot in ./card.png"
+},
+{
+"expect": "none",
+"query": "critique my landing page hero in ./hero.png"
+},
+{
+"expect": "none",
+"query": "scaffold an apps sdk widget with react for my mcp server"
+},
+{
+"expect": "audit-discoverability",
+"query": "rewrite the descriptions of my mcp tools so claude calls them at the right time"
+},
+{
+"expect": "none",
+"query": "my tools/list response is too big and clients time out, how do i shrink it"
+},
+{
+"expect": "design-widgets",
+"query": "does anyone in the store show a map inside their card? want to see examples before we build"
+},
+{
+"expect": "watch-competitors",
+"query": "my mcp server rival added tools? check https://mcp.context7.com/mcp vs last month"
+}
+]
