@@ -2,7 +2,7 @@
 
 A collection of agent skills for getting an AI plugin into the stores, found and picked. Built for developers who ship ChatGPT apps, Claude plugins and connectors, Cursor plugins and MCP servers, and want their coding agent to help with submission, listing copy, discoverability, widget design and competitor tracking. Works with Claude Code, Codex, Cursor and any agent that supports [Agent Skills](https://agentskills.io).
 
-Built by [OpenApps](https://theopenapps.com?ref=plugin-stack), which tracks about 29,000 listings across six stores and the MCP servers they link to, in 48 ChatGPT countries, every day. The skills run on that data.
+Built by [OpenApps](https://theopenapps.com?ref=plugin-stack), which tracks about 29,000 listings across six stores and the MCP servers they link to, in 48 ChatGPT countries, every day. The skills run on that data, and you can browse it on the site: [ChatGPT](https://theopenapps.com/chatgpt?ref=plugin-stack), [Claude](https://theopenapps.com/claude?ref=plugin-stack) and [Cursor](https://theopenapps.com/cursor?ref=plugin-stack).
 
 Found a problem, or want a skill changed? [Open an issue](https://github.com/theopenapps/plugin-stack/issues).
 
@@ -129,7 +129,7 @@ In Claude Code you can also call one by name: `/watch-competitors`, or `/plugin-
 
 ## Data
 
-Each skill reads OpenApps through the CLI when it has a shell, the MCP server when it doesn't, and the REST API when all it can do is fetch a URL. You don't need an account. Signed out, the skills read the United States and 7 days of history. A free account adds every country, 30 days and more rows per list: run `npx -y @theopenapps/cli@latest auth login`. If a limit cuts something from a report, the report says what's missing.
+Each skill reads [OpenApps](https://theopenapps.com?ref=plugin-stack) through the CLI when it has a shell, the [MCP server](https://theopenapps.com/docs/mcp?ref=plugin-stack) when it doesn't, and the [REST API](https://theopenapps.com/docs/api?ref=plugin-stack) when all it can do is fetch a URL. You don't need an account. Signed out, the skills read the United States and 7 days of history. A free account adds every country, 30 days and more rows per list: run `npx -y @theopenapps/cli@latest auth login`. [Pro](https://theopenapps.com/pricing?ref=plugin-stack) reads full history and every row, and compares several apps in one call. If a limit cuts something from a report, the report says what's missing.
 
 ## What they can't tell you
 

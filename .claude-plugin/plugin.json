@@ -5,7 +5,7 @@
     "name": "The Open Apps, Inc.",
     "url": "https://theopenapps.com"
   },
-  "homepage": "https://theopenapps.com",
+  "homepage": "https://theopenapps.com?ref=plugin-stack",
   "repository": "https://github.com/theopenapps/plugin-stack",
   "license": "MIT",
   "skills": "./skills"

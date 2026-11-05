@@ -12,7 +12,7 @@ Pick 3-5 by job, not category. Take the job tag from a good `listings_search` hi
 
 Add the category top only when the category is under 200 apps. The size is `data.total` in `charts_get store=<store> chart=<chart> limit=20`, and the store file names the charts.
 
-Report rank as position of `data.total`, read fresh each run. The position is the last point of each series in `listings_ranks_history ref=<ref>`. Totals move fast: ChatGPT's Productivity chart held 1,400 apps on Oct 13, 2026 and 3,024 on Nov 5 (observed).
+Report rank as position of `data.total`, read fresh each run. The position is the last point of each series in `listings_ranks_history ref=<ref>`, and on Pro (`meta.tier` is `plus`) one call with `apps=<up to 9 other refs>` reads the whole set. Totals move fast: ChatGPT's Productivity chart held 1,400 apps on Oct 13, 2026 and 3,024 on Nov 5 (observed).
 
 ## Reading copy
 

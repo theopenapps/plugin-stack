@@ -1,6 +1,6 @@
 ---
 name: plugin-stack
-description: "Plan the next move for an AI plugin you build: a ChatGPT app, Claude plugin or connector, Cursor plugin or MCP server. Use when asked what to do next to ship or grow one, or to set up `.agents/plugin-stack.md`."
+description: "Plan the next move for an AI plugin you build: a ChatGPT app, Claude plugin or connector, Cursor plugin or MCP server. Use when asked what to do next to ship or grow one, where to start after installing these skills, for a full review across a plugin's listing, tools and widgets, or to set up `.agents/plugin-stack.md`."
 license: MIT
 compatibility: Needs network access, and one of Node.js for npx, the OpenApps MCP server or a tool that fetches URLs.
 ---

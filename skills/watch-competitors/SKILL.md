@@ -1,6 +1,6 @@
 ---
 name: watch-competitors
-description: "Watch an AI plugin's competitors over time: ranks, installs, featuring, listing rewrites and MCP tool changes, side by side, and what changed since last time. Use when naming rivals in the ChatGPT, Claude or Cursor stores, comparing who's gaining in a category, or for a weekly check. Not for a one-off chart lookup."
+description: "Watch an AI plugin's competitors over time: ranks, installs, featuring, listing rewrites, MCP tool changes and the countries that list them, side by side, and what changed since last time. Use when naming rivals in the ChatGPT, Claude or Cursor stores, comparing who's gaining in a category, or for a weekly check or monitor. Not for a one-off chart lookup."
 license: MIT
 compatibility: Needs network access, and one of Node.js for npx, the OpenApps MCP server or a tool that fetches URLs.
 ---

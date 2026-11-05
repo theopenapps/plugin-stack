@@ -1,6 +1,6 @@
 # Contributing
 
-Open an issue for a bug, a wrong number or a skill you'd like. For a change, open a pull request against `main`. Every commit on `main` reaches plugin users as an update, so merge only what's ready.
+Open an issue for a bug, a wrong number or a skill you'd like. The numbers come from [OpenApps](https://theopenapps.com?ref=plugin-stack), so you can compare a report with the site. For a change, open a pull request against `main`. Every commit on `main` reaches plugin users as an update, so merge only what's ready.
 
 ## Layout
 
@@ -11,7 +11,7 @@ skills/<name>/
   LICENSE.txt
 shared/           data.md, cli.md, mcp.md and api.md, copied into every skill's references/
 evals/            Routing queries and traps
-scripts/          check-skills.mjs and test-installs.sh
+scripts/          check-skills.mjs, check-contract.mjs and test-installs.sh
 .claude-plugin/   Claude Code plugin and marketplace
 .codex-plugin/    Codex plugin
 .agents/plugins/  Codex marketplace
@@ -31,6 +31,7 @@ scripts/          check-skills.mjs and test-installs.sh
 
 ```bash
 node scripts/check-skills.mjs
+node scripts/check-contract.mjs
 ```
 
 ```bash
