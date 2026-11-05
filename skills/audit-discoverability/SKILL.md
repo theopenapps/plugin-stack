@@ -1,11 +1,13 @@
 ---
 name: audit-discoverability
-description: "Audit whether agents would find and pick an AI plugin when a user asks: how its listing and MCP tool descriptions answer target prompts, with a labelled simulated pick against rivals. Use when agents ignore a plugin, for AEO for plugins, or to fix MCP tool descriptions and annotations. Not for writing store copy."
+description: "Audit whether agents would find and pick an AI plugin or MCP server when a user asks: how its listing and MCP tool descriptions answer target prompts, with a labelled simulated pick against rivals. Use when asked to audit a plugin or MCP server, when agents ignore a plugin, to check prompts people should use it for against rivals, for AEO for plugins, to grade a pasted tool list or tools against a rival's, to check whether an app can be reached in a country, or to fix MCP tool descriptions and annotations such as readOnlyHint. Not for writing store copy."
 license: MIT
 compatibility: Needs network access, and one of Node.js for npx, the OpenApps MCP server or a tool that fetches URLs.
 ---
 
 # Audit discoverability
+
+A question such as "how do I figure out what's wrong?" or "what do I need?" is a request to run these steps on this repo, so run them instead of explaining them.
 
 ## Read at each step
 

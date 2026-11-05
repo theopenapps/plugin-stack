@@ -1,6 +1,6 @@
 ---
 name: optimize-listing
-description: "Optimize a live AI plugin's store listing: name, description, keywords and category, compared with the category's top listings and their recent rewrites, ending in paste-ready copy. Use for ChatGPT, Claude or Cursor listings, keyword gaps against rivals, ASO, or when a plugin isn't getting installs. Not for custom GPTs, mobile apps or a first submission's copy."
+description: "Optimize a live AI plugin's store listing: name, description, keywords and category, compared with the category's top listings and their recent rewrites, ending in paste-ready copy. Use for ChatGPT, Claude or Cursor listings, keywords missing against named rivals, what top apps changed in their copy, ASO, or when a plugin isn't getting installs. Not for custom GPTs, mobile apps or a first submission's copy."
 license: MIT
 compatibility: Needs network access, and one of Node.js for npx, the OpenApps MCP server or a tool that fetches URLs.
 ---
