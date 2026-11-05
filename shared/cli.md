@@ -4,7 +4,7 @@
 npx -y @theopenapps/cli@latest <command> [flags]
 ```
 
-An operation's first `_` is a space and the rest are `-`: `charts_get` is `charts get`, `listings_ranks_history` is `listings ranks-history`, `mcp_toolset_get` is `mcp toolset-get`. `--help` on a command shows which parameters are positional, such as `charts get <store> <chart>` and `listings versions <ref>`. The rest are flags, spelled the same way: `limit=20` is `--limit 20`, `diff_from=-7d` is `--diff-from=-7d`. Write relative times with `=`.
+An operation's first `_` is a space and the rest are `-`: `charts_get` is `charts get`, `listings_ranks_history` is `listings ranks-history`, `mcp_toolset_get` is `mcp toolset-get`. `--help` on a command shows which parameters are positional, such as `charts get <store> <chart>` and `listings versions <ref>`. The rest are flags, spelled the same way: `limit=20` is `--limit 20`, `diff_from=-7d` is `--diff-from=-7d`. Write relative times with `=`. `latest=true` is the bare flag `--latest`, and a value starting with `-` takes `=`: `--since=-7d`.
 
 Sign in with `auth login`, or set `OPENAPPS_API_KEY`.
 
