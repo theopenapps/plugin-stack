@@ -5,8 +5,7 @@
     "url": "https://theopenapps.com"
   },
   "metadata": {
-    "description": "Skills for AI plugin builders, on live data from OpenApps",
-    "version": "0.1.0"
+    "description": "Skills for AI plugin builders, on live data from OpenApps"
   },
   "plugins": [
     {

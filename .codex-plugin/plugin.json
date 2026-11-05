@@ -1,7 +1,6 @@
 {
   "name": "plugin-stack",
   "description": "Skills for AI plugin builders: optimize listings, submit to stores, audit discoverability, design widgets and watch competitors, on live data from OpenApps",
-  "version": "0.1.0",
   "author": {
     "name": "The Open Apps, Inc.",
     "url": "https://theopenapps.com"
