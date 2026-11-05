@@ -78,6 +78,11 @@ for (const skill of skills) {
 
 if (licenses.size > 1) fail("LICENSE.txt", `differs across skills: ${[...licenses.values()].map((s) => s.join(", ")).join(" | ")}`);
 
+// Claude Code holds back an update until the version changes. With no version, every commit on main is an update.
+for (const manifest of [".claude-plugin/plugin.json", ".codex-plugin/plugin.json"]) {
+  if ("version" in JSON.parse(readFileSync(manifest, "utf8"))) fail(manifest, "has a version");
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);
