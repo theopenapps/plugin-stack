@@ -16,7 +16,7 @@ Report rank as position of `data.total`, read fresh each run. The position is th
 
 ## Reading copy
 
-Read copy with `listings_versions ref=<ref>`, last array element. `listings_get` and `charts_get` give only the subtitle; their `listing` is `{}`. Budget one `versions` call per competitor.
+Read copy with `listings_versions ref=<ref> latest=true`, last array element. `listings_get` and `charts_get` give only the subtitle; their `listing` is `{}`. Budget one `versions` call per competitor.
 
 | Listing | Paths |
 |---|---|

@@ -21,7 +21,7 @@ With fewer than half sourced, the report says: `Coverage is circular: <d> of <n>
 
 ## Fields (steps 1 and 3)
 
-The full copy is only in `listings_versions ref=<ref>`. `listings_get` and `charts_get` rows carry `short_description` alone.
+The full copy is only in `listings_versions ref=<ref> latest=true`. `listings_get` and `charts_get` rows carry `short_description` alone.
 
 | Store | Fields |
 |---|---|
