@@ -79,9 +79,9 @@ for (const skill of skills) {
 if (licenses.size > 1) fail("LICENSE.txt", `differs across skills: ${[...licenses.values()].map((s) => s.join(", ")).join(" | ")}`);
 
 // Claude Code holds back an update until the version changes. With no version, every commit on main is an update.
-for (const manifest of [".claude-plugin/plugin.json", ".codex-plugin/plugin.json"]) {
-  if ("version" in JSON.parse(readFileSync(manifest, "utf8"))) fail(manifest, "has a version");
-}
+if ("version" in JSON.parse(readFileSync(".claude-plugin/plugin.json", "utf8"))) fail(".claude-plugin/plugin.json", "has a version");
+// Codex updates whatever the version says, and the HOL list requires one, so its manifest keeps a fixed one.
+if (JSON.parse(readFileSync(".codex-plugin/plugin.json", "utf8")).version !== "1.0.0") fail(".codex-plugin/plugin.json", "version is not 1.0.0");
 
 if (errors.length) {
   console.error(errors.join("\n"));
