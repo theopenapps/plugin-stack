@@ -2,7 +2,7 @@
 
 A collection of agent skills for getting an AI plugin into the stores, found and picked. Built for developers who ship ChatGPT apps, Claude plugins and connectors, Cursor plugins and MCP servers, and want their coding agent to help with submission, listing copy, discoverability, widget design and competitor tracking. Works with Claude Code, Codex, Cursor and any agent that supports [Agent Skills](https://agentskills.io).
 
-Built by [OpenApps](https://theopenapps.com?ref=plugin-stack), which tracks about 29,000 listings across six stores and the MCP servers they link to, in 48 ChatGPT countries, every day. The skills run on that data, and you can browse it on the site: [ChatGPT](https://theopenapps.com/chatgpt?ref=plugin-stack), [Claude](https://theopenapps.com/claude?ref=plugin-stack) and [Cursor](https://theopenapps.com/cursor?ref=plugin-stack).
+Built by [OpenApps](https://theopenapps.com?ref=plugin-stack), which tracks the AI plugin stores and the MCP servers they link to, every day. The skills run on that data, and you can browse it on the site: [ChatGPT](https://theopenapps.com/chatgpt?ref=plugin-stack), [Claude](https://theopenapps.com/claude?ref=plugin-stack) and [Cursor](https://theopenapps.com/cursor?ref=plugin-stack).
 
 Found a problem, or want a skill changed? [Open an issue](https://github.com/theopenapps/plugin-stack/issues).
 
@@ -90,7 +90,7 @@ cp -r plugin-stack/skills/optimize-listing .claude/skills/
 
 ### What we've tested
 
-Last run on 2026-11-05 from GitHub.
+CI reruns the installs on every pull request and every week.
 
 | Agent | `npx skills` | Plugin |
 |---|---|---|

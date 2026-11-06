@@ -23,13 +23,13 @@ Then per ref:
 | `mcp_toolset_get app=<ref> diff_from=<window>` | `data.servers[].{status,checked_at,diff.{added,removed,changed}}` |
 | `listings_versions ref=<ref>` | Competitors only: the records named under Copy |
 
-Ten refs cost about 40 to 50 calls, and about 10 fewer on Pro.
+Each ref costs several calls, so keep the list short on a low plan.
 
 ## Ranks
 
 For each chart two or more refs share, sort them by position at the window's start and at its end. A ref gains when it passes another ref in the set. A chart with one ref gives a position and no comparison, and each store's ranks stand alone.
 
-Raw position moves with the whole list. On 2026-10-09 Google Drive went from #49 to #2 in ChatGPT's Popular, and 17 of the 18 other apps with a stored series slid exactly one place while their order among themselves held (observed, OpenApps data of 2026-10-13).
+Raw position moves with the whole list. When one app jumps, the others slide a place while their order among themselves holds.
 
 Date a move from its `rank_move` row (`t`, `chart`, `before`, `after`), or from the series point where no row exists.
 
@@ -47,9 +47,9 @@ For a competitor known only by its server URL, use `mcp_toolset_get server=<url>
 
 Copy edits are `description`, `keywords` and `name`, with before and after. On ChatGPT `description` is the 30-character subtitle. On Pro a copy change older than 7 days also has `rank_impact.{chart,before,after}`: print it as timing beside the change, never as its effect.
 
-Report `publisher` changes too, because they can mean a sale or a move to another company. State the change itself: Daily Tarot's `Vidline Inc.` to `Sider` and Todoist's `Doist Inc.` to `Doist`, both on 2026-10-30, arrived as the same event.
+Report `publisher` changes too, because they can mean a sale or a move to another company. State the change itself, because a sale and a tidied company name arrive as the same event.
 
-Report `category` when the values differ as a set. Hide `icon` and `url` changes unless the user asks, since ChatGPT icon ids change with no visible edit. Of the 15 Claude events a signed-out read returned for the week to 2026-11-05 (311 in all), 2 of the 3 `category` events only reordered the array and all 3 `url` events were a trailing slash (observed).
+Report `category` when the values differ as a set. Hide `icon` and `url` changes unless the user asks, since ChatGPT icon ids change with no visible edit. Some `category` events only reorder the array, and some `url` events are a trailing slash.
 
 Long descriptions and starter prompts raise no events. For each competitor, diff the records in `listings_versions ref=<ref>`: on ChatGPT `data.detail[].data.release.interface.{long_description,default_prompts}`, on Claude and Cursor `data.listing[].data.description`. Going oldest first, a record with `seen_since` inside the window whose fields differ from the record before it is a rewrite. A new record can leave these fields untouched, so compare the fields.
 

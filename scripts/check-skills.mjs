@@ -83,6 +83,15 @@ if ("version" in JSON.parse(readFileSync(".claude-plugin/plugin.json", "utf8")))
 // Codex updates whatever the version says, and the HOL list requires one, so its manifest keeps a fixed one.
 if (JSON.parse(readFileSync(".codex-plugin/plugin.json", "utf8")).version !== "1.0.0") fail(".codex-plugin/plugin.json", "version is not 1.0.0");
 
+// An observed figure goes stale in a published skill. A report reads its figures live and dates them there.
+const stale = /\b20\d\d-\d\d-\d\d\b|\b(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]* \d{1,2}\b|\d%/;
+const published = ["README.md", ...walk(root).filter((file) => file.endsWith(".md")), ...walk("shared")];
+for (const file of published) {
+  readFileSync(file, "utf8").split("\n").forEach((line, i) => {
+    if (!line.startsWith("Checked: ") && stale.test(line)) fail(`${file}:${i + 1}`, "has an observed figure or date; name what to read instead");
+  });
+}
+
 if (errors.length) {
   console.error(errors.join("\n"));
   process.exit(1);

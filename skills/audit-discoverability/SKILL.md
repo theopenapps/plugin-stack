@@ -32,4 +32,4 @@ A question such as "how do I figure out what's wrong?" or "what do I need?" is a
 1. Any `Degraded:` lines, then `This simulation is not informative for this set` if a control failed.
 2. `Baseline:` the `best` chart place from the plugin's `listings_search` row, with `meta.as_of`, so the next run has something to compare.
 3. Fixes, ranked: reachability, tool text that risks store review, prompts the plugin won and should have lost, then missed prompts, sourced ones before drafted ones. A tool fix gives the replacement text. A listing fix names the missing words and the field, and leaves the copy to `optimize-listing`. With no listing yet, name `submit-plugin`.
-4. Evidence: the coverage line, the tool verdicts with their benchmarks, the picks with their label, the real-assistant line and what the simulation can't tell you.
+4. Evidence: the coverage line, the tool verdicts, the picks with their label, the real-assistant line and what the simulation can't tell you.
