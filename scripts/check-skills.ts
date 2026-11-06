@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 // Fails when a skill breaks a rule of this repo. No dependencies.
-//   node scripts/check-skills.mjs          check
-//   node scripts/check-skills.mjs --write  copy shared/ into every skill, then check
+//   node scripts/check-skills.ts          check
+//   node scripts/check-skills.ts --write  copy shared/ into every skill, then check
 import { copyFileSync, existsSync, readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative } from "node:path";
 
 const root = "skills";
-const errors = [];
-const fail = (file, why) => errors.push(`${file}: ${why}`);
+const errors: string[] = [];
+const fail = (file: string, why: string) => errors.push(`${file}: ${why}`);
 
-const walk = (dir) =>
+const walk = (dir: string): string[] =>
   readdirSync(dir).flatMap((name) => {
     const path = join(dir, name);
     return statSync(path).isDirectory() ? walk(path) : [path];
@@ -17,8 +17,8 @@ const walk = (dir) =>
 
 const skills = readdirSync(root).filter((name) => statSync(join(root, name)).isDirectory());
 const shared = readdirSync("shared").map((name) => `references/${name}`);
-const sharedPath = (rel) => join("shared", rel.replace("references/", ""));
-const licenses = new Map();
+const sharedPath = (rel: string) => join("shared", rel.replace("references/", ""));
+const licenses = new Map<string, string[]>();
 
 // Skills name operations. Only shared/cli.md spells out a command or flag.
 const command = /\b(?:listings (?:search|list|get|versions|widgets|metrics|tools|ranks-current|ranks-history)|charts (?:get|regions-get)|changes list|tags (?:get|tree)|market get|new list|stores get|mcp toolset-get)\b|@theopenapps\/cli|--(?:apps|since|limit|store|types|cursor|from|diff-from|server|app|sort|category|latest|format|fields)\b/;
@@ -34,7 +34,7 @@ for (const skill of skills) {
 
   const text = readFileSync(main, "utf8");
   const front = text.match(/^---\n([\s\S]*?)\n---/)?.[1] ?? "";
-  const field = (key) => front.match(new RegExp(`^${key}: "?(.*?)"?$`, "m"))?.[1];
+  const field = (key: string) => front.match(new RegExp(`^${key}: "?(.*?)"?$`, "m"))?.[1];
   if (field("name") !== skill) fail(main, `name is ${field("name")}, directory is ${skill}`);
   const description = field("description") ?? "";
   if (!description) fail(main, "no description");
@@ -63,7 +63,7 @@ for (const skill of skills) {
     const isShared = shared.includes(rel);
     if (body.includes("../")) fail(path, "contains ../");
     if (/\bTODO\b/.test(body)) fail(path, "contains TODO");
-    if (!isShared && command.test(body.replace(/^---\n[\s\S]*?\n---/, ""))) fail(path, `spells out a command: ${body.match(command)[0]}; name the operation`);
+    if (!isShared && command.test(body.replace(/^---\n[\s\S]*?\n---/, ""))) fail(path, `spells out a command: ${body.match(command)![0]}; name the operation`);
     if (!rel.startsWith("references/")) continue;
     if (/\]\((?!https?:)[^)]+\)/.test(body)) fail(path, "a reference links to another file");
     if (isShared) continue;
