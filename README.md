@@ -1,6 +1,6 @@
 # Plugin Stack: Agent Skills for AI Plugin Builders
 
-A collection of agent skills for getting an AI plugin into the stores, found and picked. Built for developers who ship ChatGPT apps, Claude plugins and connectors, Cursor plugins and MCP servers, and want their coding agent to help with submission, listing copy, discoverability, widget design and competitor tracking. Works with Claude Code, Codex, Cursor and any agent that supports [Agent Skills](https://agentskills.io).
+A collection of agent skills for getting an AI plugin into the stores, found and picked. Built for developers who ship ChatGPT apps, Claude plugins and connectors, Cursor plugins and MCP servers, and want their coding agent to help with picking a category, submission, the wait for review, listing copy, discoverability, widget design and competitor tracking. Works with Claude Code, Codex, Cursor and any agent that supports [Agent Skills](https://agentskills.io).
 
 Built by [OpenApps](https://theopenapps.com?ref=plugin-stack), which tracks about 29,000 listings across six stores and the MCP servers they link to, in 48 ChatGPT countries, every day. The skills run on that data, and you can browse it on the site: [ChatGPT](https://theopenapps.com/chatgpt?ref=plugin-stack), [Claude](https://theopenapps.com/claude?ref=plugin-stack) and [Cursor](https://theopenapps.com/cursor?ref=plugin-stack).
 
@@ -15,19 +15,20 @@ Skills are folders of instructions that an agent loads when a task calls for the
 Start with `plugin-stack`. It reads your repo and the stores, saves what it learns to `.agents/plugin-stack.md`, and suggests your next steps. The other skills read that file if it's there, and each one also works alone.
 
 ```text
-               ┌─────────────────────────────────┐
-               │           plugin-stack          │
-               │  setup, one finding, next steps │
-               └────────────────┬────────────────┘
-                                │ .agents/plugin-stack.md
-         ┌──────────────────────┼────────────────────────┐
-         ▼                      ▼                        ▼
-┌────────────────┐  ┌───────────────────────┐  ┌───────────────────┐
-│ Ship           │  │ Get found             │  │ Keep up           │
-├────────────────┤  ├───────────────────────┤  ├───────────────────┤
-│ submit-plugin  │  │ optimize-listing      │  │ watch-competitors │
-│ design-widgets │  │ audit-discoverability │  │                   │
-└────────────────┘  └───────────────────────┘  └───────────────────┘
+                       ┌───────────────────────────────────┐
+                       │            plugin-stack           │
+                       │   setup, one finding, next steps  │
+                       └─────────────────┬─────────────────┘
+                                         │ .agents/plugin-stack.md
+        ┌─────────────────┬──────────────┼──────┬───────────────────────┐
+        ▼                 ▼                     ▼                       ▼
+┌──────────────┐ ┌────────────────┐ ┌───────────────────────┐ ┌───────────────────┐
+│ Pick         │ │ Ship           │ │ Get found             │ │ Keep up           │
+├──────────────┤ ├────────────────┤ ├───────────────────────┤ ├───────────────────┤
+│ find-opening │ │ submit-plugin  │ │ optimize-listing      │ │ watch-competitors │
+│              │ │ design-widgets │ │ audit-discoverability │ │                   │
+│              │ │ track-launch   │ │                       │ │                   │
+└──────────────┘ └────────────────┘ └───────────────────────┘ └───────────────────┘
 ```
 
 ## Skills
@@ -35,7 +36,9 @@ Start with `plugin-stack`. It reads your repo and the stores, saves what it lear
 | Skill | What you get |
 |---|---|
 | [`plugin-stack`](skills/plugin-stack/) | Setup, one finding about your plugin, and your next steps |
+| [`find-opening`](skills/find-opening/) | Which categories and tags are growing or crowded, how locked their top apps are, and a short ranked list of openings with dated evidence |
 | [`submit-plugin`](skills/submit-plugin/) | A readiness check and submission kit for ChatGPT, Claude and Cursor, including the choices you can't change later |
+| [`track-launch`](skills/track-launch/) | How your review wait compares with similar ChatGPT apps that went live, which of the 48 countries list you, and what gets apps like yours delisted |
 | [`design-widgets`](skills/design-widgets/) | Rendered widgets from live ChatGPT apps, a critique of yours, and a redesign that says which moves have precedent |
 | [`optimize-listing`](skills/optimize-listing/) | The words to target, field-by-field verdicts against your competitors, and paste-ready copy within the store's limits |
 | [`audit-discoverability`](skills/audit-discoverability/) | Whether your listing and tools answer the prompts you care about, with a labeled simulated pick against competitors |
@@ -109,8 +112,14 @@ Ask in your own words:
 "We built the plugin. Now what?"
 → plugin-stack
 
+"I want to build a ChatGPT app. Which categories are still open?"
+→ find-opening
+
 "How do I get my MCP server listed on the Claude connectors directory?"
 → submit-plugin
+
+"I submitted our ChatGPT app 9 days ago. Is that normal?"
+→ track-launch
 
 "What do the widgets from Trip.com and Kiwi look like inside ChatGPT?"
 → design-widgets
@@ -133,7 +142,7 @@ Each skill reads [OpenApps](https://theopenapps.com?ref=plugin-stack) through th
 
 ## What they can't tell you
 
-No study yet shows that listing rewrites move ranks. The discoverability pick is a simulation, not a store's real search. Each report says so, and dates every number.
+No study yet shows that listing rewrites move ranks. Openings are counted from listings, not demand or usage, and a review wait is compared only with apps that went live. The discoverability pick is a simulation, not a store's real search. Each report says so, and dates every number.
 
 ## Contributing
 

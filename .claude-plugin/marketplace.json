@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "plugin-stack",
-      "description": "Optimize listings, submit to stores, audit discoverability, design widgets and watch competitors",
+      "description": "Find openings, submit to stores, track launches, optimize listings, audit discoverability, design widgets and watch competitors",
       "source": "./"
     }
   ]
