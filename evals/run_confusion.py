@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Run a labelled query pool with all six skills installed; record the first tool each run calls."""
+"""Run a labelled query pool with all eight skills installed; record the first tool each run calls."""
 import json, subprocess, sys, collections, concurrent.futures as cf
 pilot, pool_path, out, model, runs = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4], int(sys.argv[5])
 pool = json.load(open(pool_path)); TURNS=sys.argv[6] if len(sys.argv)>6 else "1"
-SKILLS = {"plugin-stack","optimize-listing","submit-plugin","audit-discoverability","design-widgets","watch-competitors"}
+SKILLS = {"plugin-stack","optimize-listing","submit-plugin","audit-discoverability","design-widgets","watch-competitors","find-opening","track-launch"}
 def run(q):
     p = subprocess.run(["claude","-p",q,"--output-format","stream-json","--verbose","--max-turns",TURNS,"--model",model,
         "--setting-sources","project","--strict-mcp-config","--mcp-config",'{"mcpServers":{}}'],cwd=pilot,capture_output=True,text=True,timeout=170)

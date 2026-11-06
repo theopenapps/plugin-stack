@@ -6,7 +6,10 @@ Take the first two or three rows that apply. Fewer than two apply: add the skill
 
 | State | Suggest |
 |---|---|
+| Submitted and not live yet, or delisted, no `track-launch` line in 7 days | `track-launch` |
+| Nothing built yet, or no category picked, no `find-opening` line | `find-opening` |
 | No listing, no `submit-plugin` line under Runs | `submit-plugin` |
+| Live less than 30 days, no `track-launch` line | `track-launch` |
 | Live, no `optimize-listing` line in 30 days | `optimize-listing` |
 | No `audit-discoverability` line in 30 days | `audit-discoverability` |
 | Widgets in the repo or a store that shows them, no `design-widgets` line | `design-widgets` |

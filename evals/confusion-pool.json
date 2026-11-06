@@ -296,11 +296,11 @@
 "query": "what's the top ranking chatgpt app in germany today?"
 },
 {
-"expect": "none",
+"expect": "track-launch",
 "query": "why is my chatgpt app not available in germany"
 },
 {
-"expect": "none",
+"expect": "none|find-opening",
 "query": "how big is the claude connector market, how many launched last month"
 },
 {
@@ -346,5 +346,61 @@
 {
 "expect": "watch-competitors",
 "query": "my mcp server rival added tools? check https://mcp.context7.com/mcp vs last month"
+},
+{
+"expect": "find-opening",
+"query": "thinking about building a chatgpt app but no idea which category. where is there still room?"
+},
+{
+"expect": "find-opening",
+"query": "is the fitness space on chatgpt already crowded or is there an opening for a workout tracker"
+},
+{
+"expect": "find-opening",
+"query": "which claude connector categories are growing fastest and which are saturated? we haven't built anything yet"
+},
+{
+"expect": "find-opening",
+"query": "before we write any code: what kinds of apps are missing from the chatgpt store compared to claude"
+},
+{
+"expect": "find-opening",
+"query": "is it too late to build a travel app for chatgpt? how locked is the top of that category"
+},
+{
+"expect": "find-opening",
+"query": "we can build an mcp server for anything in finance. which niche is underserved right now"
+},
+{
+"expect": "track-launch",
+"query": "submitted our chatgpt app 9 days ago and still in review. is that normal?"
+},
+{
+"expect": "track-launch",
+"query": "our app plugin_asdk_app_6ae01d35c0ffee went in for review, how long do travel apps usually wait"
+},
+{
+"expect": "track-launch",
+"query": "chatgpt app got approved yesterday but my friend in the UK can't find it. which countries is it actually listed in"
+},
+{
+"expect": "track-launch",
+"query": "our chatgpt app disappeared from the directory overnight. do delisted apps come back? what should i check"
+},
+{
+"expect": "track-launch",
+"query": "just went live on chatgpt. what gets apps in our category delisted so we can avoid it"
+},
+{
+"expect": "track-launch",
+"query": "it's been 5 weeks since we submitted to openai with no answer, what now"
+},
+{
+"expect": "watch-competitors",
+"query": "which apps are on top of the travel category on chatgpt this week and who moved"
+},
+{
+"expect": "optimize-listing",
+"query": "we're live on chatgpt since monday, make the listing copy better"
 }
 ]
