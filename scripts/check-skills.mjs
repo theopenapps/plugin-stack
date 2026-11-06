@@ -21,7 +21,7 @@ const sharedPath = (rel) => join("shared", rel.replace("references/", ""));
 const licenses = new Map();
 
 // Skills name operations. Only shared/cli.md spells out a command or flag.
-const command = /\b(?:listings (?:search|list|get|versions|widgets|metrics|tools|ranks-current|ranks-history)|charts get|changes list|tags get|new list|stores get|mcp toolset-get)\b|@theopenapps\/cli|--(?:apps|since|limit|store|types|cursor|from|diff-from|server|app|sort|category|latest|format|fields)\b/;
+const command = /\b(?:listings (?:search|list|get|versions|widgets|metrics|tools|ranks-current|ranks-history)|charts (?:get|regions-get)|changes list|tags (?:get|tree)|market get|new list|stores get|mcp toolset-get)\b|@theopenapps\/cli|--(?:apps|since|limit|store|types|cursor|from|diff-from|server|app|sort|category|latest|format|fields)\b/;
 
 if (process.argv.includes("--write")) {
   for (const skill of skills) for (const rel of shared) copyFileSync(sharedPath(rel), join(root, skill, rel));

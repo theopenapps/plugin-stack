@@ -38,7 +38,7 @@ Start with `plugin-stack`. It reads your repo and the stores, saves what it lear
 | [`plugin-stack`](skills/plugin-stack/) | Setup, one finding about your plugin, and your next steps |
 | [`find-opening`](skills/find-opening/) | Which categories and tags are growing or crowded, how locked their top apps are, and a short ranked list of openings with dated evidence |
 | [`submit-plugin`](skills/submit-plugin/) | A readiness check and submission kit for ChatGPT, Claude and Cursor, including the choices you can't change later |
-| [`track-launch`](skills/track-launch/) | How your review wait compares with similar ChatGPT apps that went live, which of the 48 countries list you, and what gets apps like yours delisted |
+| [`track-launch`](skills/track-launch/) | How your review wait compares with similar ChatGPT apps that went live, which countries list you, and what gets apps like yours delisted |
 | [`design-widgets`](skills/design-widgets/) | Rendered widgets from live ChatGPT apps, a critique of yours, and a redesign that says which moves have precedent |
 | [`optimize-listing`](skills/optimize-listing/) | The words to target, field-by-field verdicts against your competitors, and paste-ready copy within the store's limits |
 | [`audit-discoverability`](skills/audit-discoverability/) | Whether your listing and tools answer the prompts you care about, with a labeled simulated pick against competitors |

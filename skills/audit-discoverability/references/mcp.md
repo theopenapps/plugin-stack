@@ -4,11 +4,11 @@ The server is `https://theopenapps.com/mcp`. To sign in, the user connects `http
 
 | Operation | Tool |
 |---|---|
-| `changes_list`, `charts_get`, `listings_search`, `mcp_toolset_get`, `new_list`, `stores_get`, `tags_get` | The same name, with the same parameters |
+| `changes_list`, `charts_get`, `listings_search`, `market_get`, `mcp_toolset_get`, `new_list`, `stores_get`, `tags_get` | The same name, with the same parameters |
 | `listings_get`, `listings_metrics`, `listings_ranks_current`, `listings_tools` | `listings_profile` with `apps=[<ref>]`; one call covers all four |
 | `listings_ranks_history` | None: date moves from the `rank_move` rows of `changes_list` |
 | `listings_versions latest=true`, `listings_widgets` | `listings_copy app=<ref>` |
-| `listings_list`, older `listings_versions` records | None |
+| `charts_regions_get`, `listings_list`, `tags_tree`, older `listings_versions` records | None |
 
 `listings_profile` answers with `data.profiles[].{app,ranks,metrics,tools}`, so the `listings_get` fields a skill names are under `app`, and its `data.charts`, `data.metrics` and `data.servers` paths are under `ranks`, `metrics` and `tools`.
 
