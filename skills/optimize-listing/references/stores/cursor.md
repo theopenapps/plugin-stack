@@ -8,7 +8,7 @@ The Marketplace and cursor.directory are separate systems with separate queues, 
 
 ## Marketplace fields
 
-The manifest is `.cursor-plugin/plugin.json`, or root `plugin.json` in the Agent Plugins format. Each edit needs a manual review, and the Marketplace doesn't update from source by itself, so bundle edits into one commit and request a re-index. Staff on Cursor's forum say to email marketplace-publishing@cursor.com with the name, repo and commit (read Oct 25, 2026) and give no timeline (Oct 14, 2026).
+The manifest is `.cursor-plugin/plugin.json`, or root `plugin.json` in the Agent Plugins format. Each edit needs a manual review, and the Marketplace doesn't update from source by itself, so bundle edits into one commit and request a re-index. Staff on Cursor's forum say to email marketplace-publishing@cursor.com with the name, repo and commit and give no timeline.
 
 | Field | Limit | Where to edit | Cost of a change | What is shown |
 |---|---|---|---|---|
@@ -17,7 +17,7 @@ The manifest is `.cursor-plugin/plugin.json`, or root `plugin.json` in the Agent
 | `keywords` | None documented | Manifest | Manual review | Doesn't appear in the listing. Documented as search tags; effect unknown |
 | `category` | None documented | `marketplace.json` | Manual review | Doesn't appear in the listing; the category shown is curated |
 
-Observed by OpenApps on Oct 25, 2026: curated category and verification line up with Popular, and copy features don't. The median description is 57 characters for Cursor's own plugins and 126 for outside publishers. How Popular is ordered is unknown.
+Observed by OpenApps: curated category and verification line up with Popular, and copy features don't. How Popular is ordered is unknown.
 
 ## cursor.directory fields
 
@@ -29,7 +29,7 @@ These rules come from the directory's public source code; deployed behavior may 
 | `description` | At least 10 characters | The directory, signed in | Can re-trigger the scan, hidden meanwhile | Card line |
 | `keywords` | None stated | The directory, signed in | Can re-trigger the scan, hidden meanwhile | In the detail record; display unknown |
 
-A `safe` verdict makes the listing public automatically. `suspicious` or `malicious` sends it to manual review, and the scan's categories include spam, impersonation and low_quality. Verification is a request by the owner, granted by an admin; 1 of 5,830 entries had it (observed by OpenApps, Oct 25, 2026).
+A `safe` verdict makes the listing public automatically. `suspicious` or `malicious` sends it to manual review, and the scan's categories include spam, impersonation and low_quality. Verification is a request by the owner, granted by an admin, and few entries have it.
 
 ## Preflight
 

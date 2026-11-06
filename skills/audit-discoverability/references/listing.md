@@ -39,6 +39,6 @@ Mark each competitor the same way, and name those that cover a prompt the plugin
 
 `listings_search query="<words>"` shows a keyword match in OpenApps' catalogue. It's not the store's search and not an assistant's search, so mark coverage from the listing's own words and name it a proxy.
 
-No ChatGPT or Claude doc read on 2026-11-05 says which fields their directory search reads, so a prompt covered only by `keywords` gets the note `keywords only`.
+Neither ChatGPT's nor Claude's docs say which fields their directory search reads, so a prompt covered only by `keywords` gets the note `keywords only`.
 
 Report line: `Covered <k> of <n> target prompts (proxy: the listing's own words). <d> of <n> prompts were drafted.`

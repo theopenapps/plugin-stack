@@ -16,6 +16,12 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
           node-version: 22
+      - name: No AI attribution in commits
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          COMMITS: ${{ github.event.pull_request.commits_url }}
+        run: "! gh api --paginate \"$COMMITS\" --jq '.[].commit.message' | grep -iE '^(co-authored-by: .*(claude|anthropic)|claude-session:)'"
       - run: node scripts/check-skills.mjs
       - run: node scripts/check-contract.mjs
       - run: npm install -g @anthropic-ai/claude-code @openai/codex

@@ -38,38 +38,29 @@ Reject a draft with any of these:
 
 The list: Productivity, Creativity, Developer Tools, Business & Operations, Data & Analytics, Communication, Education & Research, Security, Finance, Healthcare, Travel, Entertainment, Other.
 
-`Entertainment` lands in Other and `Education & Research` in Education (observed). On 2026-11-05 Daily Tarot's manifest said `Entertainment` and it sat in Other.
+`Entertainment` lands in Other and `Education & Research` in Education (observed).
 
 ## Keywords
 
-Set by 51% of new apps and 8% of older ones (observed by OpenApps, Oct 25, 2026). Add a few real terms the plugin honors.
+Add a few real terms the plugin honors.
 
 ## Ordering
 
 Documented by OpenAI:
 
 - A plugin reaches the directory's main pages only when OpenAI selects it for enhanced distribution. That can't be requested, and few plugins get it at publication.
-- Rankings prioritize plugins people keep using after installation, on web and mobile (release notes, Aug 21, 2026).
+- Rankings prioritize plugins people keep using after installation, on web and mobile (release notes).
 
 Observed by OpenApps:
 
-- 93% of recent go-lives sat in a US category list, and none on a home shelf, New & Noteworthy or Popular (Oct 25, 2026).
+- Recent go-lives land in a US category list, not on a home shelf, New & Noteworthy or Popular.
 - There is one global order. A country changes only which apps appear, and a fall in rank can just mean apps were placed above.
 
 ## Search
 
-OpenAI doesn't document what directory search reads. Observed by OpenApps on 2026-11-05: the top 50 of its search for 64 short queries, signed out, US. This is one snapshot and a correlation, so it can't show that adding a word lifts a plugin.
+OpenAI doesn't document what directory search reads. In OpenApps' read of its results, the query sat in the name more often near the top and in `keywords` more often lower down. This is a correlation, so it can't show that adding a word lifts a plugin.
 
-| Rank | Query in the name | Query in `keywords` |
-|---|---|---|
-| 1-3 | 76% | 44% |
-| 4-10 | 51% | 58% |
-| 11-25 | 26% | 76% |
-| 26-50 | 13% | 75% |
-
-The top result held the query in its name on 53 of 64 queries. Of 2,706 results, 859 held it only in `keywords`, at a median rank of 24, and 4% held it in none of the name, subtitle, description and `keywords`.
-
-Placement that fits this: the main target word in `displayName`, related words in `keywords`, contested words in `longDescription`. A name can carry a job and stay within the rules: `AI Video Maker` was #18 in Creativity on 2026-11-05.
+Placement that fits this: the main target word in `displayName`, related words in `keywords`, contested words in `longDescription`. A name can carry a job and stay within the rules, such as `AI Video Maker`.
 
 ## Reading numbers
 

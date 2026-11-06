@@ -29,9 +29,9 @@ Give one fresh agent the five prompts and no listings, so its words can't echo t
 
 > For each numbered message a user might send, write only the words you would search an app store with. One line each: `<number> | <words>`.
 
-Assistants add competitor brand names and task words, so record both. An assistant's search also differs from the store's: on 2026-10-28 ChatGPT, asked about flights and hotels, searched `Booking.com Expedia Tripadvisor flights hotels travel booking` and found eight apps the store's search for `flights hotels` missed, and Claude's search shared 3 to 5 of 10 results with the directory's (OpenApps, observed).
+Assistants add competitor brand names and task words, so record both. An assistant's search also differs from the store's: it can add brand and task words to the query and find apps the store's search for the same words missed, so the two result sets overlap only in part (OpenApps, observed).
 
-Check the plugin's listing against these words, as step 3 did against the prompts. A missing task word is a fix. Brand names show who the assistant expects and stay out of the fixes, because ChatGPT's rules bar comparisons in a subtitle or description (https://developers.openai.com/plugins/plugin-guidelines.md, checked 2026-11-05).
+Check the plugin's listing against these words, as step 3 did against the prompts. A missing task word is a fix. Brand names show who the assistant expects and stay out of the fixes, because ChatGPT's rules bar comparisons in a subtitle or description (https://developers.openai.com/plugins/plugin-guidelines.md).
 
 ## Picks
 

@@ -22,7 +22,7 @@ The store manifests stay where each store reads them. Generate their review fiel
 
 Find candidates with `listings_search query="<1-3 nouns for the job>" store=<store> limit=10`. Search matches words one at a time, so a pasted README sentence mostly returns noise. A good hit's job tag widens the set: `tags_get tag=<tag> store=<store> limit=20`. Confirm the 3 closest with the user. If fewer than 3 exist, read those and say so in `README.md`.
 
-Read the 3 closest live listings with `listings_versions ref=<ref> latest=true`. Reuse their shape, never their words: how many starter prompts, how long the description runs, category value, capabilities, skills, whether screenshots are filled. Check where the category really lands: compare the manifest's `interface.category` with the row's `category` (on 2026-11-05, `Entertainment` landed in Other).
+Read the 3 closest live listings with `listings_versions ref=<ref> latest=true`. Reuse their shape, never their words: how many starter prompts, how long the description runs, category value, capabilities, skills, whether screenshots are filled. Check where the category really lands: compare the manifest's `interface.category` with the row's `category` (`Entertainment` has landed in Other).
 
 | Listing | Where the copy sits |
 |---|---|

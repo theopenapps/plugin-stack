@@ -2,7 +2,7 @@ Checked: 2026-11-05 against https://cursor.com/docs/reference/plugins.md. Over 9
 
 # Cursor submission
 
-Also behind this file: https://cursor.com/marketplace-publisher-terms (last updated May 6, 2026), https://cursor.com/help/security-and-privacy/marketplace-security.md, https://cursor.com/marketplace/publish.
+Also behind this file: https://cursor.com/marketplace-publisher-terms, https://cursor.com/help/security-and-privacy/marketplace-security.md, https://cursor.com/marketplace/publish.
 
 ## Choose a door
 
@@ -13,7 +13,7 @@ The Marketplace needs all of these:
 - A public GitHub repo. Every Marketplace plugin is open source.
 - Permissive licenses only, such as MIT, BSD or Apache 2.0. GPL, AGPL and LGPL are refused.
 - Free to users, with no fees, direct or indirect, for access or use through the Marketplace.
-- A form identity locked to the signed-in individual. Put the company in `author` and the description (staff forum statement, Apr 2, 2026: https://forum.cursor.com/t/cursor-plugin-submit-as-company-not-individual/156274).
+- A form identity locked to the signed-in individual. Put the company in `author` and the description (staff forum statement: https://forum.cursor.com/t/cursor-plugin-submit-as-company-not-individual/156274).
 
 cursor.directory is the community door:
 
@@ -23,9 +23,9 @@ cursor.directory is the community door:
 - A content edit can hide it for a re-scan.
 - Verification is a request by the owner, granted by an admin.
 
-These directory rules were read from its public source on 2026-11-05 (https://github.com/cursor/community-plugins), and deployed behavior may differ.
+These directory rules come from its public source (https://github.com/cursor/community-plugins), and deployed behavior may differ.
 
-The listings are separate, and each appears only in its own system (staff forum statements, read Oct 25, 2026). Report each door's numbers on their own, with no combined total. Staff steered one company that was turned down toward the directory as a first step, and said the path isn't written anywhere (forum statement, May 8, 2026, same thread as above).
+The listings are separate, and each appears only in its own system (staff forum statements). Report each door's numbers on their own, with no combined total. Staff steered one company that was turned down toward the directory as a first step, and said the path isn't written anywhere (forum statement, same thread as above).
 
 ## Lock first
 
@@ -42,20 +42,20 @@ No per-listing country choice is documented.
 - Terms, privacy policy and disclosures visible to users.
 - The product called only "Cursor".
 - A logotype that's 1:1, SVG or PNG, with a background plate.
-- Sign-in, if the plugin needs it: the form has no test-credential field, and staff gave no answer on reviewer access (forum, Apr 2, 2026). Mark this can't-tell.
+- Sign-in, if the plugin needs it: the form has no test-credential field, and staff gave no answer on reviewer access (forum). Mark this can't-tell.
 
 ## Listing fields
 
 No character limits are documented. `name` is required, with `description`, `version`, `author`, `homepage`, `repository`, `license`, `keywords`, `logo`, component paths and `variables` optional. `displayName` appears in listings and in the template, and is absent from the reference.
 
-OpenApps data, observed Oct 25, 2026: `displayName` is the title and `description` the card line, while the manifest's `category` and `keywords` don't show in the listing. Median descriptions ran 57 characters for Cursor's own plugins and 126 for outside publishers.
+OpenApps data: `displayName` is the title and `description` the card line, while the manifest's `category` and `keywords` don't show in the listing.
 
 ## Manual steps
 
 Marketplace:
 
 1. Fill in the form at https://cursor.com/marketplace/publish once, from `reviewer-notes.md`.
-2. Treat the "Thanks for applying" screen as the receipt. Nothing else arrives, and a second application makes a duplicate (forum statement, Oct 14, 2026: https://forum.cursor.com/t/marketplace-plugin-submission-pending-since-sep-24-no-response/174417).
+2. Treat the "Thanks for applying" screen as the receipt. Nothing else arrives, and a second application makes a duplicate (forum statement: https://forum.cursor.com/t/marketplace-plugin-submission-pending-since-sep-24-no-response/174417).
 
 cursor.directory:
 
@@ -64,8 +64,8 @@ cursor.directory:
 Say these in the Marketplace hand-off:
 
 - Review is manual, covers identity and business legitimacy, security, data handling and quality, and can reject for any reason with no reasons given.
-- There's no fixed time. OpenApps data, derived, Oct 25, 2026: median 15.6 days from first manifest commit to listing record (middle half 3.5 to 78.7, n = 138), with approvals in batches.
-- Updates aren't live until you request a re-index. Staff say to email marketplace-publishing@cursor.com with the plugin name, repo and commit (forum statement, read Oct 25, 2026).
+- There's no fixed time, and approvals come in batches (OpenApps data, derived).
+- Updates aren't live until you request a re-index. Staff say to email marketplace-publishing@cursor.com with the plugin name, repo and commit (forum statement).
 
 ## Rejected or stuck
 
@@ -75,4 +75,4 @@ cursor.directory: a flagged plugin waits for manual review. The categories are `
 
 ## Older advice
 
-Older guides send submissions through Slack or a staff email, and staff answers from Jul 2026 say the form is closed. Sep and Oct staff answers and the docs say otherwise (read Oct 25, 2026).
+Older guides send submissions through Slack or a staff email, and some staff answers say the form is closed. Later staff answers and the docs say otherwise.

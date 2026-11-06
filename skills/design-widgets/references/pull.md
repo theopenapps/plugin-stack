@@ -8,9 +8,9 @@ With no surface that reaches `listings_widgets`, Pull can't run. Say so and mark
 
 1. Put first any ChatGPT listing the user names or `.agents/plugin-stack.md` lists as a competitor.
 2. Run `charts_get store=chatgpt chart=category:<c> limit=100`, where `<c>` is the user's ChatGPT category or the closest one by job, such as `business-and-operations`. `stores_get store=chatgpt` lists them. Keep rows whose `tags` hold both `signin-open` and `apps-sdk`.
-3. Call `listings_widgets ref=<ref>` on up to 8 candidates and stop at 4 hits. A hit is a listing whose `data.widgets` has entries. On 2026-11-05, 2 of 7 open apps and 0 of 3 OAuth apps tried by hand had renders (observed, a small sample), so expect more misses than hits.
+3. Call `listings_widgets ref=<ref>` on up to 8 candidates and stop at 4 hits. A hit is a listing whose `data.widgets` has entries. Open apps often have no renders and OAuth apps rarely do, so expect more misses than hits.
 4. If the category gives no candidate or no hit, say so, then repeat step 3 on the rows of `tags_get tag=signin-open store=chatgpt limit=20`, found under `data.top`. Label those results as from outside the category.
-5. If that also comes back empty, try `chatgpt:kiwi-com` and `chatgpt:chessy`, which had renders on 2026-11-05, with the same label.
+5. If that also comes back empty, try `chatgpt:kiwi-com` and `chatgpt:chessy`, which have had renders, with the same label.
 
 Done when you have 4 hits or have tried every list above. Write an absence as "none of the N apps I tried": apps whose server needs sign-in are mostly absent, so a miss says nothing about what the market does.
 
