@@ -11,7 +11,8 @@ skills/<name>/
   LICENSE.txt
 shared/           data.md, cli.md, mcp.md and api.md, copied into every skill's references/
 evals/            Routing queries and traps
-scripts/          check-skills.mjs, check-contract.mjs and test-installs.sh
+scripts/          check-skills.ts, check-contract.ts and test-installs.sh
+package.json      TypeScript, for type-checking the scripts. Node runs them directly
 .claude-plugin/   Claude Code plugin and marketplace
 .codex-plugin/    Codex plugin
 .agents/plugins/  Codex marketplace
@@ -19,10 +20,10 @@ scripts/          check-skills.mjs, check-contract.mjs and test-installs.sh
 
 ## Rules
 
-`scripts/check-skills.mjs` enforces the first three and the last.
+`scripts/check-skills.ts` enforces the first three and the last.
 
 - A skill works alone. A single-skill install copies only that skill's folder, so a skill can't link to anything outside it.
-- Skills name operations, such as `listings_versions`. Commands, tools and paths live in `shared/`. Edit `shared/`, then run `node scripts/check-skills.mjs --write` to copy it into every skill.
+- Skills name operations, such as `listings_versions`. Commands, tools and paths live in `shared/`. Edit `shared/`, then run `node scripts/check-skills.ts --write` to copy it into every skill.
 - Each store file starts with `Checked: YYYY-MM-DD against <url>`.
 - `SKILL.md` holds the steps. Anything only some runs need goes in `references/`, with a step in `SKILL.md` saying when to read it.
 - A report dates every number it reads, gives its basis, and says what it couldn't read. Leave out a claim you can't back.
@@ -31,8 +32,9 @@ scripts/          check-skills.mjs, check-contract.mjs and test-installs.sh
 ## Before you open a pull request
 
 ```bash
-node scripts/check-skills.mjs
-node scripts/check-contract.mjs
+npm ci && npx tsc
+node scripts/check-skills.ts
+node scripts/check-contract.ts
 ```
 
 ```bash
@@ -41,6 +43,6 @@ scripts/test-installs.sh
 
 The second installs the skills into clean folders, as plugins for Claude Code and Codex and through `npx skills` for 11 agents, and checks that each one got all of them. CI runs both. Add `--run` to also ask each signed-in agent on your machine to use a skill, which spends model credits.
 
-If you change a skill's description, run its queries from `evals/confusion-pool.json` with `evals/run_confusion.py`. If you change what a skill does, run its row in `evals/traps.md`.
+If you change a skill's description, run its queries from `evals/confusion-pool.json` with `evals/run-confusion.ts`. If you change what a skill does, run its row in `evals/traps.md`.
 
 Commits and pull requests carry no AI attribution. `.claude/settings.json` turns it off in Claude Code, and CI fails a pull request whose commits carry it.

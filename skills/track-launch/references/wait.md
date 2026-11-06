@@ -11,7 +11,7 @@ On ChatGPT, `launched_at` is when the app's ID was created, decoded from the ID 
 For a live app, `listings_get ref=<ref>` gives `data.app.{launched_at,first_seen_at,tags,availability}`, and its category is on the app's row in the comparison below. For an app not live yet, use the start time from step 1 and the category the user named.
 
 ```
-new_list store=chatgpt sort=first_seen_at category=<category> kinds=chatgpt:apps_sdk since=-30d limit=200
+new_list store=chatgpt sort=first_seen_at category=<category> kinds=chatgpt:apps_sdk since=-30d limit=<200 signed out, 1000 with an account>
 ```
 
 `sort=first_seen_at` orders by go-live day, and `since` then bounds go-live, not creation. Read `app`, `launched_at` and `first_seen_at`. A category title is spelled as rows show it, such as `Travel` or `Business & Operations`. The ID's own app has no row until it goes live, so a missing row is expected.

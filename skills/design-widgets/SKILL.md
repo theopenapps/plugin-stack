@@ -19,4 +19,4 @@ Mark each design claim by its source: precedent (widgets from two or more apps),
 
 Done when every design claim is marked precedent, example or opinion, and every widget cited links its listing.
 
-If `.agents/plugin-stack.md` exists, add `design-widgets: <today>, operation: <operation>` under Runs, in your own words.
+If `.agents/plugin-stack.md` exists, add `design-widgets: <today>, operation: <operation>` under Runs without asking, in your own words.

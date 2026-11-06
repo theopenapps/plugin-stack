@@ -25,7 +25,7 @@ A question such as "how do I figure out what's wrong?" or "what do I need?" is a
 3. **Audit the listing's words.** Done when every target prompt is marked covered or missed, with the competitors that cover it.
 4. **Audit the tools.** Read them from `mcp_toolset_get`, the repo's server code, or `tools/list` output the user pastes. Done when every tool has a verdict on saying what it does, when to use it, and its annotations. With none of the three, say so in the report and go to step 5.
 5. **Run the simulated pick.** Done when each prompt has a pick, its reason and a run count, labelled as a simulation.
-6. **Report.** Ranked fixes. Done when every fix names a target prompt it should help and every number has its date and basis. If `.agents/plugin-stack.md` exists, add `audit-discoverability: <today>, top fix: <fix>` under Runs, in your own words.
+6. **Report.** Ranked fixes. Done when every fix names a target prompt it should help and every number has its date and basis. If `.agents/plugin-stack.md` exists, add `audit-discoverability: <today>, top fix: <fix>` under Runs without asking, in your own words.
 
 ## Report order
 

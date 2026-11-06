@@ -8,7 +8,7 @@ A whole store costs tens of calls and hundreds of rows at these limits.
 
 | Call | Read |
 |---|---|
-| `tags_tree store=<store>` | `data.tags[].{id,label,facet,parent,depth,n,stores}` and `data.stores[].apps`. A tag's `n` counts the apps under its narrower tags too. Candidates come from facet `job`; facet `works` is the products an app connects to |
+| `tags_tree store=<store>`, once per store: save it to a file and filter the file | `data.tags[].{id,label,facet,parent,depth,n,stores}` and `data.stores[].apps`. A tag's `n` counts the apps under its narrower tags too. Candidates come from facet `job`; facet `works` is the products an app connects to |
 | `market_get store=<store>` | `data.stores[].launches.weeks[].{week,n}`, the store's launches per week for a year, and `lists[].{chart,title,apps}`, each list's size |
 | `tags_get tag=<id> store=<store> limit=20`, with `kinds=connector` or `kinds=plugin` on Claude | `data.tag.n`, `data.kpis.new_30d`, `data.weeks[].{week,n}` (31 weeks), `data.children[].n`, and `data.top[]`, best chart place first: `name`, `publisher`, `launched_at`, `best.{chart,position}`, `prev_week`, and on ChatGPT `countries.{listed,of}` |
 | `new_list store=chatgpt since=-28d limit=1`, then `since=-56d` | `data.total` and `data.facets[].{value,total}`: launches per ChatGPT category in one call each. Subtract the first from the second for the four weeks before. On Claude the facets are kinds, not categories |
@@ -32,7 +32,7 @@ Lists grow too, so compare a list's size only at one date.
 Many listings alone isn't crowded. A tag is crowded when its supply is large or rising and its top is held by brands with their own product or by the store's owner, since a new app doesn't displace either.
 
 - Count, in the top 10, the store's owner (OpenAI on ChatGPT, Anthropic on Claude) and brands: companies with a product people already use outside the store, such as Dropbox or MyFitnessPal. A small studio whose store app is its only product isn't a brand here, even when its publisher matches the app's name. Which is which is a judgment from the name and publisher: say so.
-- On ChatGPT, read the top from `charts_get` on the category when a candidate maps to one, and from `tags_get` only for finer tags. The two can place an app far apart, so check a surprising place against the chart.
+- On ChatGPT, read the top from `charts_get` on the category whenever a candidate maps to one, and from `tags_get` only for finer tags. If you can't read the chart, add a `Degraded:` line. The two can place an app far apart, so check a surprising place against the chart.
 - Count apps launched in the last 90 days among the top 20. This is the plainest sign the top still lets newcomers in.
 - Turnover against `at=-28d` counts only when the newcomers are new apps. Established brands arriving isn't an opening.
 

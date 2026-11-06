@@ -14,7 +14,7 @@ Don't wait for missing countries to fill in by themselves: many new apps carry `
 tags_get tag=delisted store=chatgpt limit=200
 ```
 
-`data.tag.n` is how many ChatGPT apps are delisted now, and `data.related[].{id,label,n,lift}` lists the tags they carry more often than apps at large: a lift of 1.5 means half again as often. Set the app's job tags, from `listings_get`, against that list, and print the lift and `n` of each one it shares. With n under 30, call it a lean, not a pattern. Delisted rows lose their category, so `category` is empty on them: match by tag.
+`data.tag.n` is how many ChatGPT apps are delisted now, and `data.related[].{id,label,n,lift}` lists the tags they carry more often than apps at large: a lift of 1.5 means half again as often. Set the app's job tags, from `listings_get`, against that list, and print the lift and `n` of each one it shares. A lift of 1.5 or more with n of 30 or more is a pattern. The same lift with n under 30 is a lean. A lift under 1.5 is no signal. Word the app's risk only as pattern, lean or no signal, with no level such as low or moderate. Delisted rows lose their category, so `category` is empty on them: match by tag.
 
 Each row's `mcp_status` is the server's status now. Count `error`, `dead` and `blocked` among the delisted rows, then the store's share: `tags_get tag=mcp-down store=chatgpt limit=1` gives `data.tag.n`, every ChatGPT app whose server is down, blocked or erroring, and `stores_get` the store's size. A down server can follow the delisting as easily as cause it, so word it as company, not cause.
 

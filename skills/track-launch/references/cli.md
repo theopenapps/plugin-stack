@@ -4,7 +4,7 @@
 npx -y @theopenapps/cli@latest <command> [flags]
 ```
 
-Write the whole command each time. `C="npx -y ..."; $C charts get` fails in zsh, which doesn't split a variable into words.
+Type the whole command every time. Never put it in a variable or an alias: zsh doesn't split a variable into words, so the call fails. Save a large answer to a file and filter the file, rather than reading it again.
 
 An operation's first `_` is a space and the rest are `-`: `charts_get` is `charts get`, `listings_ranks_history` is `listings ranks-history`, `mcp_toolset_get` is `mcp toolset-get`. `--help` on a command shows which parameters are positional, such as `charts get <store> <chart>`, `listings versions <ref>` and `mcp toolset-get <ref>`. The rest are flags, spelled the same way: `limit=20` is `--limit 20`, `diff_from=-7d` is `--diff-from=-7d`. Write relative times with `=`. `latest=true` is the bare flag `--latest`, and a value starting with `-` takes `=`: `--since=-7d`.
 

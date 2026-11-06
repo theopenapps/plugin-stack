@@ -22,7 +22,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           COMMITS: ${{ github.event.pull_request.commits_url }}
         run: "! gh api --paginate \"$COMMITS\" --jq '.[].commit.message' | grep -iE '^(co-authored-by: .*(claude|anthropic)|claude-session:)'"
-      - run: node scripts/check-skills.mjs
-      - run: node scripts/check-contract.mjs
+      - run: npm ci
+      - run: npx tsc
+      - run: node scripts/check-skills.ts
+      - run: node scripts/check-contract.ts
       - run: npm install -g @anthropic-ai/claude-code @openai/codex
       - run: scripts/test-installs.sh
