@@ -22,4 +22,4 @@ Report the table: word, top 10 holding it in the name, who they are, and the fie
 
 ## More than one listing
 
-If the plugin does separate jobs for separate people, put one listing per job to the user as a question. Results vary: on 2026-11-05 Windsor.ai held at least 10 ChatGPT listings, ranked from #4 to #1,409 in Business & Operations (observed), and ChatGPT's guidelines bar spam.
+If the plugin does separate jobs for separate people, put one listing per job to the user as a question. Results vary: one publisher's listings can rank far apart, and ChatGPT's guidelines bar spam.

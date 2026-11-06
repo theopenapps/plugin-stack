@@ -13,13 +13,13 @@ Portal edits are saved, then submitted for review, and stay pending until a revi
 | Field | Limit | Where to edit | Cost of a change | What is shown |
 |---|---|---|---|---|
 | Display name | 100 | Portal | Re-review; it affects existing users | Name |
-| One-liner (the portal's tagline) | 200 | Portal | Review | Card, about 81 characters visible (Oct 25, 2026) |
+| One-liner (the portal's tagline) | 200 | Portal | Review | Card, which shows only the start |
 | Description | 2,000 | Portal | Review | Detail card, in your words; Anthropic can't edit it |
 | Categories | 1 to 5 | Portal | Review | Categories |
 | Tool and prompt names | Tool name 64 | Portal | Review | Names on the listing |
 | Slug | Locked after publication | Nowhere | Can't change | Listing URL |
 
-Observed by OpenApps on Oct 25, 2026: the median one-liner is 50 characters (7 words) and the median description 442. Cards show two lines, so make the one-liner's first 81 characters stand alone.
+Cards show two lines, so make the one-liner's opening stand alone.
 
 ## Plugin fields
 
@@ -46,7 +46,7 @@ Unknown: whether public order follows Directory rank.
 
 ## Search
 
-Anthropic doesn't document what directory search reads. Observed by OpenApps on 2026-11-05: the top 50 of its search for 64 short queries, as a signed-out visitor. This is one snapshot and a correlation. The query was in the name of 44% of results at ranks 1-3, 19% at 4-10, 6% at 11-25 and 4% at 26-50, and in neither the name nor the one-liner of 46% to 78% of them, so search reads more than those two fields.
+Anthropic doesn't document what directory search reads. In OpenApps' read of its results, the query sat in the name mostly near the top, and many results held it in neither the name nor the one-liner, so search reads more than those two fields. This is a correlation.
 
 Placement that fits this: the main target word in the display name, the rest in the one-liner and description.
 

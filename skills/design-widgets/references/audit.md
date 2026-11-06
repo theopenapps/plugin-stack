@@ -26,7 +26,7 @@ Put each frame beside the pulled widgets at the same width and theme: 720 light 
 | Dark mode holds | 720 dark |
 | The model's text doesn't repeat the widget | A real reply |
 
-Store images hold no model text, so run the trigger prompt in the host or ask the user for a reply. One way to fix a repeat, as an example: on 2026-11-05 Kiwi.com's `search-flight` description told the model to keep its reply to one short sentence, since the widget already shows the itineraries. Before copying that, read the store's rule on tool text that steers the model. On 2026-11-05 [ChatGPT's guidelines](https://developers.openai.com/plugins/plugin-guidelines.md) barred metadata that steers model selection, and [Claude's connector review](https://claude.com/docs/connectors/building/review-criteria.md) listed descriptions that instruct Claude as a rejection reason.
+Store images hold no model text, so run the trigger prompt in the host or ask the user for a reply. One way to fix a repeat is a tool description that tells the model to keep its reply to one short sentence, since the widget already shows the result. Before copying that, read the store's rule on tool text that steers the model: [ChatGPT's guidelines](https://developers.openai.com/plugins/plugin-guidelines.md) bar metadata that steers model selection, and [Claude's connector review](https://claude.com/docs/connectors/building/review-criteria.md) lists descriptions that instruct Claude as a rejection reason.
 
 ## 4. List the states
 

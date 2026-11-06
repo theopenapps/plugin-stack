@@ -2,7 +2,7 @@ Checked: 2026-11-05 against https://developers.openai.com/plugins/deploy/submiss
 
 # ChatGPT submission
 
-ChatGPT and Codex share one plugin directory. "Apps" became plugins on Jul 9, 2026, and an app is now the MCP connection inside a plugin. Also behind this file: https://developers.openai.com/plugins/deploy/submission-errors.md, https://developers.openai.com/plugins/deploy/app-review.md, https://developers.openai.com/plugins/plugin-guidelines.md.
+ChatGPT and Codex share one plugin directory. "Apps" became plugins, and an app is now the MCP connection inside a plugin. Also behind this file: https://developers.openai.com/plugins/deploy/submission-errors.md, https://developers.openai.com/plugins/deploy/app-review.md, https://developers.openai.com/plugins/plugin-guidelines.md.
 
 ## Final-submission gate
 
@@ -48,9 +48,9 @@ OpenAI's pages disagree in two places:
 - Screenshots: the guidelines say they're no longer shown, and the errors page still sets rules for them. Leave them out unless the plugin has UI (`screenshots_not_allowed`). If included: one PNG or JPEG per starter prompt, exactly 706 px wide, 400 to 860 px tall.
 - Annotation justifications: the guidelines say they're no longer required, the errors page still lists `justification_required`, and the manifest has no field for them. Whether the portal still asks is unconfirmed, so keep one sentence per hint ready.
 
-`keywords` is an optional list of discovery terms with no stated limit. Whether directory search reads it is unconfirmed. OpenApps data, observed Oct 25, 2026: 51% of new listings set it, against 8% of older ones.
+`keywords` is an optional list of discovery terms with no stated limit. Whether directory search reads it is unconfirmed.
 
-OpenAI's `chatgpt-app-submission` skill last changed on 2026-06-17, before the move to plugins. If the user already ran it, convert its output: `user_prompt` and `expected_output` become `prompt` and `expected_behavior`, and its category values map onto the 13 titles above.
+OpenAI's `chatgpt-app-submission` skill predates the move to plugins. If the user already ran it, convert its output: `user_prompt` and `expected_output` become `prompt` and `expected_behavior`, and its category values map onto the titles above.
 
 ## Lock before first upload
 
@@ -79,7 +79,7 @@ Signed out, `availability` shows only the US. Every row's `tags` still says `wor
 
 After publishing, read the plugin's own `availability` the same way, signed in, and compare it with the recorded choice. No store data can tell a setting from an OpenAI restriction, so report a missing country as a question, with no claim about its cause.
 
-OpenApps data, observed Oct 25, 2026, across 48 tracked countries: 94% of top-100 apps (1,132 of 1,202) were in all of them, and 83% of recent go-lives (2,833 of 3,430).
+OpenApps data: most top apps and recent go-lives are listed in every tracked country.
 
 ## Manual steps
 
@@ -94,9 +94,9 @@ OpenApps data, observed Oct 25, 2026, across 48 tracked countries: 94% of top-10
 
 Put these in the hand-off:
 
-- Say the wait is weeks. `launched_at` is when the ID was created and `first_seen_at` when it appeared, so subtract them for comparable listings from `new_list store=chatgpt sort=first_seen_at since=-30d category=<category> limit=20`, and quote the range, not a date. On 2026-11-05 that gave 1 to 35 days across 20 Productivity listings (derived). Top-chart rows can't answer this: that day, 19 of Productivity's top 20 carried the same `first_seen_at`, 2026-10-05.
-- OpenApps data, derived: 3,216 Apps SDK apps that went live Oct 6 to 25, 2026 took a median 14.9 days from ID creation (middle half 9.1 to 17.1), which covers build, submit and review together. Forum reports from Jun to Aug 2026 run from 11 days to about 2 months. OpenAI publishes no timeline and doesn't accept requests to expedite.
-- Say what publishing brings. People find a new plugin by direct link or by searching its name. It reaches the directory's main pages only if OpenAI selects it, few are selected at publication, and nobody can apply. OpenApps data, observed Oct 25, 2026: 93% of recent go-lives sat in a US category list, and none on a home shelf, New & Noteworthy or Popular.
+- Say the wait is weeks. `launched_at` is when the ID was created and `first_seen_at` when it appeared, so subtract them for comparable listings from `new_list store=chatgpt sort=first_seen_at since=-30d category=<category> limit=20`, and quote the range, not a date. Top-chart rows can't answer this, because many can carry the same `first_seen_at`.
+- The span from ID creation covers build, submit and review together. OpenAI publishes no timeline and doesn't accept requests to expedite.
+- Say what publishing brings. People find a new plugin by direct link or by searching its name. It reaches the directory's main pages only if OpenAI selects it, few are selected at publication, and nobody can apply. OpenApps data: recent go-lives land in a US category list, not on a home shelf, New & Noteworthy or Popular.
 
 ## Rejected or stuck
 
@@ -115,4 +115,4 @@ A review with no answer yet: track it under **Review status** on the Plugins pag
 
 ## Older advice
 
-Third-party guides that still rank (seen Oct 25 and 2026-11-05) describe the `apps-manage` form, the case ID as the reference (use the plugin ID), 3+ required screenshots, a 64x64 SVG icon under 5 KB, Developer Mode setup, owner-only submission and a Lifestyle category. The rules above replace all of these.
+Third-party guides that still rank describe the `apps-manage` form, the case ID as the reference (use the plugin ID), 3+ required screenshots, a 64x64 SVG icon under 5 KB, Developer Mode setup, owner-only submission and a Lifestyle category. The rules above replace all of these.

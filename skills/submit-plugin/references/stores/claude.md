@@ -94,7 +94,7 @@ Common rejection reasons:
 | Plugin | Name, short description | From `plugin.json` and the README |
 | Plugin | Description | The README |
 
-Visible length, OpenApps data, observed Oct 25, 2026: connector cards show two lines, about 81 characters on the marketplace page. The median one-liner ran 50 characters (7 words) and the median description 442. Directory data cuts plugin descriptions at 500 characters, a limit the docs don't state.
+Visible length, OpenApps data: connector cards show two lines, well short of the limit, so most one-liners run short. Directory data also cuts plugin descriptions below what the docs state.
 
 ## Manual steps
 
@@ -116,4 +116,4 @@ Say in the hand-off that review time isn't fixed. The docs say a connector is sc
 
 ## Older advice
 
-Guides that still rank (seen Oct 25 and 2026-11-05) say Team or Enterprise only, `admin-settings/directory/submissions`, the Console form, MCPB accepted, or `clau.de/plugin-directory-submission`. The portal above replaces all of these.
+Guides that still rank say Team or Enterprise only, `admin-settings/directory/submissions`, the Console form, MCPB accepted, or `clau.de/plugin-directory-submission`. The portal above replaces all of these.

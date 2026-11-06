@@ -12,7 +12,7 @@ Pick 3-5 by job, not category. Take the job tag from a good `listings_search` hi
 
 Add the category top only when the category is under 200 apps. The size is `data.total` in `charts_get store=<store> chart=<chart> limit=20`, and the store file names the charts.
 
-Report rank as position of `data.total`, read fresh each run. The position is the last point of each series in `listings_ranks_history ref=<ref>`, and on Pro (`meta.tier` is `plus`) one call with `apps=<up to 9 other refs>` reads the whole set. Totals move fast: ChatGPT's Productivity chart held 1,400 apps on Oct 13, 2026 and 3,024 on Nov 5 (observed).
+Report rank as position of `data.total`, read fresh each run. The position is the last point of each series in `listings_ranks_history ref=<ref>`, and on Pro (`meta.tier` is `plus`) one call with `apps=<up to 9 other refs>` reads the whole set. Totals move fast.
 
 ## Reading copy
 
@@ -32,11 +32,11 @@ There is no category filter and events have no category field. Run `changes_list
 
 Long descriptions and starter prompts never appear as events: to see them, diff `detail` records from `listings_versions`.
 
-An empty result is normal, so say so. ChatGPT's Productivity top 10 had no copy edit in the 7 days to 2026-11-05 (observed).
+An empty result is normal, so say so.
 
 If the competitors show no rewrites, page `changes_list store=<store> types=listing_change since=-7d` with `cursor` and keep events whose `best.chart` or `tags` match. `best.chart` reads `category:featured` for Popular apps and `popularity` on Claude, so match tags there. State how many events you read.
 
-Quote each rewrite's `before`, `after` and `t` with its `url`. In the 7 days to 2026-11-05, CheapOair's subtitle went from `Search flights & hotels` to `Search flights, hotels & cars` (observed). A rewrite, the plugin's own included, shows what someone chose to say and nothing about whether it worked, so rank moves around it stay out of the verdict.
+Quote each rewrite's `before`, `after` and `t` with its `url`. A rewrite, the plugin's own included, shows what someone chose to say and nothing about whether it worked, so rank moves around it stay out of the verdict.
 
 ## Giving a verdict
 
@@ -52,6 +52,6 @@ Mark `change` when:
 
 Everything else is `keep`. A field the store doesn't show can't change what a reader sees, so it stays unless a rule fails.
 
-Hold each `change` to the rules above, even when every top app fills the field. Show the counter-example from the user's own competitors when one exists. On 2026-11-05 Daily Tarot was #1 in ChatGPT's Other and #34 in Popular with one starter prompt, no keywords and no screenshots (observed).
+Hold each `change` to the rules above, even when every top app fills the field. Show the counter-example from the user's own competitors when one exists.
 
 Target prompts come from the user's words, issues or support threads first, then competitors' starter prompts. Prompts drawn from the plugin's own listing make the gap check circular. Say how many you drafted yourself.
