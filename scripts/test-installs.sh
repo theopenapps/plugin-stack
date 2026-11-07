@@ -25,14 +25,16 @@ if has claude; then
   [ "$source" != "$PWD" ] || claude plugin validate "$PWD" >/dev/null 2>&1 || report FAIL "claude plugin validate"
   export CLAUDE_CONFIG_DIR="$tmp/claude"
   { claude plugin marketplace add "$source" && claude plugin install plugin-stack@theopenapps; } >"$tmp/claude.log" 2>&1
-  unset CLAUDE_CONFIG_DIR
   expect "Claude Code plugin" "$claude_cache" "$want"
+  (cd "$tmp" && claude mcp list 2>&1) | grep -q '^plugin:plugin-stack:openapps: https://theopenapps.com/mcp' && report ok "Claude Code plugin: MCP server" || report FAIL "Claude Code plugin: no OpenApps MCP server"
+  unset CLAUDE_CONFIG_DIR
 else report skip "Claude Code plugin: no claude here"; fi
 
 if has codex; then
   mkdir -p "$tmp/codex"
   { CODEX_HOME="$tmp/codex" codex plugin marketplace add "$source" && CODEX_HOME="$tmp/codex" codex plugin add plugin-stack@theopenapps; } >"$tmp/codex.log" 2>&1
   expect "Codex plugin" "$codex_cache" "$want"
+  CODEX_HOME="$tmp/codex" codex mcp list 2>&1 | grep -qE '^openapps +https://theopenapps.com/mcp +.* enabled' && report ok "Codex plugin: MCP server" || report FAIL "Codex plugin: no OpenApps MCP server"
 else report skip "Codex plugin: no codex here"; fi
 
 for agent in claude-code codex cursor opencode amp gemini-cli github-copilot windsurf cline goose pi; do
